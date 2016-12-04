@@ -6,6 +6,7 @@ HTML &amp; CSS UI kit with
 * Buttons
 * Icons
 * Headers
+* Menus
 * Form Elements
 * Heros
 * Page Sections
@@ -17,4 +18,4 @@ HTML &amp; CSS UI kit with
 * Blog Posts
 * Footers
 
-Just edit index.html and style.scss to your heart's content!
+Edit index.html and style.scss to your heart's content! You can edit the other files too of course but I tried to make that unnecessary.
