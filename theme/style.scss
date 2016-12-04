@@ -1,0 +1,223 @@
+@import 'grid.scss';
+@import 'layouts.scss';
+
+html, body {
+	// base font size for desktop here
+	// on desktop it's always 16px
+	@media ($landscape) {
+		font-size:18px;
+	}
+}
+
+// typography
+body {
+	font:1rem/1.5 arial,helvetica, sans-serif;
+}
+h1 {
+	font:700 3rem/1.1 arial, helvetica, sans-serif;
+}
+h2 {
+	text-transform:uppercase;
+	letter-spacing:0.25rem;
+	font:700 1.5rem/1.2 arial, helvetica, sans-serif;
+}
+h3 {
+	color:#888;
+	font:700 1.25rem/1.3 arial, helvetica, sans-serif;
+}
+h4 {
+	font:700 1.1rem/1.4 arial, helvetica, sans-serif;
+}
+h5 {
+	color:#888;
+	font:700 1rem/1.5 arial, helvetica, sans-serif;
+}
+h6 {
+	text-transform:uppercase;
+	letter-spacing:0.25rem;
+	font:700 0.9rem/1.5 arial, helvetica, sans-serif;
+}
+.lead {
+	opacity:.5;
+	font-size:1.2rem;
+}
+a {
+	text-decoration:none;
+	color:blue;
+	&:hover {
+		color:red;
+	}
+	&:active {
+		color:green;
+	}
+}
+blockquote {
+	font-size:1.2rem;
+}
+
+// colors
+.color1 {
+	background:#000;
+}
+.color2 {
+	background:#333;
+}
+.color3 {
+	background:#888;
+}
+
+// buttons
+.button, button, input[type="submit"], .cta-nav a {
+	background:#000;
+	color:#fff;
+	&:hover {
+		color:#fff;
+		background:#333;
+	}
+	&:active {
+		color:#fff;
+		background:#888;
+	}
+}
+.secondary-button {
+	background:#888;
+	&:hover {
+		color:#fff;
+		background:#333;
+	}
+	&:active {
+		color:#fff;
+		background:#000;
+	}
+}
+
+// headers
+header {
+	box-shadow:0 0 1rem 0 rgba(black,.1);
+}
+
+// menus
+nav {
+	a {
+		text-transform:uppercase;
+		font:700 0.9rem/1.5 arial, helvetica, sans-serif;
+	}
+	@media ($landscape) {
+		header:not(.hamburger-menu) & .dropdown {
+			> ul {
+				background:#fff;
+				box-shadow:0 0 1rem 0 rgba(black,.1);
+			}
+		}
+	}
+}
+//  mobile menu
+.site-nav {
+	@media (max-width:768px) {
+		background:rgba(black,.5);
+		a {
+			color:#fff;
+		}
+	}
+	.active {
+		a {
+			color:#888;
+		}
+	}
+}
+// desktop hamburger menu
+.hamburger-menu .site-nav {
+	background:rgba(black,.5);
+	a {
+		color:#fff;
+	}
+}
+
+// tabs 
+.tabs {
+	nav {
+		a {
+			background:#fff;
+			border:1px #fff solid;
+			border-bottom:0;
+			opacity:.5;
+		}
+		.active a {
+			opacity:1;
+			border:1px #888 solid;
+			border-bottom:0;
+		}
+	}
+	.tabs-content > div {
+		border:1px #888 solid;
+		background:#fff;
+	}
+}
+
+// blockquotes
+
+.bubble {
+	background:#888;
+	color:#fff;
+	& + .cite {
+		text-align:center;
+	}
+}
+
+// forms
+input, textarea {
+	border:1px #888 solid;
+}
+.upload {
+	border:1px #888 dashed;
+}
+
+// cards
+.card {
+	background:#fff;
+}
+.feature-card {
+	background:#333;
+}
+
+// sections
+.section-one {
+	background:rgba(red,.1);
+}
+.section-two {
+	background:rgba(blue,.1);
+}
+.section-three {
+	background:rgba(green,.1);
+}
+
+// heros
+// color overlay
+.hero-a {
+	background:rgba(black,.5);
+}
+// gradient overlay
+.hero-b {
+	background: -moz-linear-gradient(top,  rgba(black,0.5) 0%, rgba(black,0) 100%);
+	background: -webkit-linear-gradient(top,  rgba(black,0.5) 0%,rgba(black,0) 100%);
+	background: linear-gradient(to bottom,  rgba(black,0.5) 0%,rgba(black,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff',GradientType=0 );
+}
+// color
+.hero-c {
+	background:rgba(green,0.1);
+}
+// gradient
+.hero-d {
+	background: -moz-linear-gradient(top,  rgba(black,1) 0%, rgba(black,0.5) 100%);
+	background: -webkit-linear-gradient(top,  rgba(black,1) 0%,rgba(black,0.5) 100%);
+	background: linear-gradient(to bottom,  rgba(black,1) 0%,rgba(black,0.5) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff',GradientType=0 );
+}
+// slider dots
+.unslider-nav ol li {
+	background:#000;
+	&.unslider-active {
+		background:red;
+	}
+}
